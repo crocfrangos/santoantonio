@@ -134,7 +134,16 @@
     transition: transform 0.18s ease, box-shadow 0.18s ease;
     text-align: left;
     position: relative;
+    overflow: hidden;
     border: 1px solid rgba(255,255,255,0.08);
+  }
+  .link-btn::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 46%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0));
+    pointer-events: none;
   }
   .link-btn:active { transform: scale(0.97) translateY(1px); }
 
@@ -267,7 +276,7 @@
           <span class="icon">📋</span>
           <span class="txt">
             <span class="main">Ver Cardápio</span>
-            <span class="sub">Peça o seu Croc Frangos</span>
+            <span class="sub">Faça seu pedido agora</span>
           </span>
           <span class="arrow">›</span>
         </a>
@@ -276,7 +285,7 @@
           <span class="icon">💬</span>
           <span class="txt">
             <span class="main">Falar no WhatsApp</span>
-            <span class="sub">Atendimento e pedidos</span>
+            <span class="sub">Tire suas dúvidas com a gente</span>
           </span>
           <span class="arrow">›</span>
         </a>
@@ -285,7 +294,7 @@
           <span class="icon">⭐</span>
           <span class="txt">
             <span class="main">Grupo VIP no WhatsApp</span>
-            <span class="sub">Descontos e novidades em primeira mão</span>
+            <span class="sub">Aproveite descontos exclusivos</span>
           </span>
           <span class="arrow">›</span>
         </a>
