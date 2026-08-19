@@ -142,9 +142,30 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 46%;
-    background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0));
+    background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
     pointer-events: none;
   }
+  .link-btn::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -60%;
+    width: 34%;
+    height: 100%;
+    background: linear-gradient(115deg, transparent, rgba(255,255,255,0.32), transparent);
+    transform: skewX(-18deg);
+    animation: btn-sheen 4.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .link-btn.cardapio::after { animation-delay: 0s; }
+  .link-btn.whats::after { animation-delay: 1.5s; }
+  .link-btn.grupo::after { animation-delay: 3s; }
+
+  @keyframes btn-sheen {
+    0%   { left: -60%; }
+    22%  { left: 130%; }
+    100% { left: 130%; }
+  }
+
   .link-btn:active { transform: scale(0.97) translateY(1px); }
 
   .link-btn .icon {
@@ -249,7 +270,7 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    * { transition: none !important; }
+    * { transition: none !important; animation: none !important; }
   }
 
   @media (max-width: 480px){
